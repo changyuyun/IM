@@ -1,0 +1,373 @@
+[2020-02-11 13:37:43 *27116.3]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Class 'EasySwoole\Task\TaskManager' not found in /data/swoole/App/WebSocket/Index.php:28
+Stack trace:
+#0 /data/swoole/vendor/easyswoole/socket/src/AbstractInterface/Controller.php(124): App\WebSocket\Index->delay()
+#1 /data/swoole/vendor/easyswoole/socket/src/Dispatcher.php(82): EasySwoole\Socket\AbstractInterface\Controller->__hook(Object(Swoole\WebSocket\Server), Object(EasySwoole\Socket\Config), Object(EasySwoole\Socket\Bean\Caller), Object(EasySwoole\Socket\Bean\Response))
+#2 /data/swoole/EasySwooleEvent.php(36): EasySwoole\Socket\Dispatcher->dispatch(Object(Swoole\WebSocket\Server), '{"action":"dela...', Object(Swoole\WebSocket\Frame))
+#3 [internal function]: EasySwoole\EasySwoole\EasySwooleEvent::EasySwoole\EasySwoole\{closure}(Object(Swoole\WebSocket\Server), Object(Swoole\WebSocket\Frame))
+#4 /data/swoole/vendor/easyswoole/easyswoole/src/ServerManager.php(134): call_user_func(Object(Closure), Object(Swoole\WebSocket\Server), Object(Swoole\WebSocket\Frame))
+#5 {main}
+  thrown in /data/swoole/App/WebSocket/Index.php on line 28
+[2020-02-11 13:37:43 $27111.0]	WARNING	swManager_check_exit_status: worker#3[pid=27116] abnormal exit, status=255, signal=0
+[2020-02-12 12:28:45 *28858.0]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Class '\App\WebSocket\Indexs' not found in /data/swoole/vendor/easyswoole/socket/src/Dispatcher.php:172
+Stack trace:
+#0 /data/swoole/vendor/easyswoole/socket/src/Dispatcher.php(75): EasySwoole\Socket\Dispatcher->getController('\\App\\WebSocket\\...')
+#1 /data/swoole/EasySwooleEvent.php(36): EasySwoole\Socket\Dispatcher->dispatch(Object(Swoole\WebSocket\Server), '{"class":"Index...', Object(Swoole\WebSocket\Frame))
+#2 [internal function]: EasySwoole\EasySwoole\EasySwooleEvent::EasySwoole\EasySwoole\{closure}(Object(Swoole\WebSocket\Server), Object(Swoole\WebSocket\Frame))
+#3 /data/swoole/vendor/easyswoole/easyswoole/src/ServerManager.php(134): call_user_func(Object(Closure), Object(Swoole\WebSocket\Server), Object(Swoole\WebSocket\Frame))
+#4 {main}
+  thrown in /data/swoole/vendor/easyswoole/socket/src/Dispatcher.php on line 172
+[2020-02-12 12:28:45 $28856.0]	WARNING	swManager_check_exit_status: worker#0[pid=28858] abnormal exit, status=255, signal=0
+[2020-02-12 19:02:00 *26661.6]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-02-12 19:02:00 *26660.5]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-02-12 19:02:00 *26659.4]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-02-12 19:02:00 *26658.3]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-02-12 19:02:00 *26657.2]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-02-12 19:02:00 *26656.1]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-02-12 19:02:00 *26655.0]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-02-12 19:02:00 $26653.0]	WARNING	swSignal_callback (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-02-12 19:02:00 $26653.0]	WARNING	swManager_check_exit_status: worker#8[pid=26663] abnormal exit, status=0, signal=1
+[2020-02-12 19:02:00 $26653.0]	WARNING	swManager_check_exit_status: worker#10[pid=26665] abnormal exit, status=0, signal=1
+[2020-02-12 19:02:00 *26662.7]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-02-12 19:02:00 $26653.0]	WARNING	swManager_check_exit_status: worker#9[pid=26664] abnormal exit, status=0, signal=1
+[2020-02-12 19:02:00 $26653.0]	WARNING	swManager_check_exit_status: worker#11[pid=26666] abnormal exit, status=0, signal=1
+[2020-02-12 19:02:00 #26652.1]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-02-12 19:02:01 *26657.2]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-02-12 19:42:32 *26655.0]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-02-12 19:42:35 *32038.0]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-02-12 19:42:36 *32049.0]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-02-12 19:43:06 *26659.4]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-02-12 19:43:17 *26658.3]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-02-12 19:43:21 *26656.1]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-02-13 15:41:26 *12438.0]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught TypeError: Return value of App\WebSocket\WebSocketParser::decode() must be an instance of EasySwoole\Socket\Bean\Caller or null, string returned in /data/swoole/App/WebSocket/WebSocketParser.php:31
+Stack trace:
+#0 /data/swoole/vendor/easyswoole/socket/src/Dispatcher.php(63): App\WebSocket\WebSocketParser->decode('', Object(EasySwoole\Socket\Client\WebSocket))
+#1 /data/swoole/EasySwooleEvent.php(39): EasySwoole\Socket\Dispatcher->dispatch(Object(Swoole\WebSocket\Server), '', Object(Swoole\WebSocket\Frame))
+#2 [internal function]: EasySwoole\EasySwoole\EasySwooleEvent::EasySwoole\EasySwoole\{closure}(Object(Swoole\WebSocket\Server), Object(Swoole\WebSocket\Frame))
+#3 /data/swoole/vendor/easyswoole/easyswoole/src/ServerManager.php(134): call_user_func(Object(Closure), Object(Swoole\WebSocket\Server), Object(Swoole\WebSocket\Frame))
+#4 {main}
+  thrown in /data/swoole/App/WebSocket/WebSocketParser.php on line 31
+[2020-02-13 15:41:26 $12436.0]	WARNING	swManager_check_exit_status: worker#0[pid=12438] abnormal exit, status=255, signal=0
+[2020-02-13 16:07:36 *16111.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Class 'App\WebSockets\Controller\Base' not found in /data/swoole/App/WebSocket/Controller/Index.php on line 16
+[2020-02-13 16:07:36 $16106.0]	WARNING	swManager_check_exit_status: worker#2[pid=16111] abnormal exit, status=255, signal=0
+[2020-02-13 16:07:37 *16131.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Class 'App\WebSockets\Controller\Base' not found in /data/swoole/App/WebSocket/Controller/Index.php on line 16
+[2020-02-13 16:07:37 $16106.0]	WARNING	swManager_check_exit_status: worker#2[pid=16131] abnormal exit, status=255, signal=0
+[2020-02-13 16:07:37 *16132.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Class 'App\WebSockets\Controller\Base' not found in /data/swoole/App/WebSocket/Controller/Index.php on line 16
+[2020-02-13 16:07:37 $16106.0]	WARNING	swManager_check_exit_status: worker#2[pid=16132] abnormal exit, status=255, signal=0
+[2020-02-13 16:07:37 *16134.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Class 'App\WebSockets\Controller\Base' not found in /data/swoole/App/WebSocket/Controller/Index.php on line 16
+[2020-02-13 16:07:37 $16106.0]	WARNING	swManager_check_exit_status: worker#2[pid=16134] abnormal exit, status=255, signal=0
+[2020-02-13 16:07:37 *16135.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Class 'App\WebSockets\Controller\Base' not found in /data/swoole/App/WebSocket/Controller/Index.php on line 16
+[2020-02-13 16:07:37 $16106.0]	WARNING	swManager_check_exit_status: worker#2[pid=16135] abnormal exit, status=255, signal=0
+[2020-02-13 16:07:37 *16136.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Class 'App\WebSockets\Controller\Base' not found in /data/swoole/App/WebSocket/Controller/Index.php on line 16
+[2020-02-13 16:07:37 $16106.0]	WARNING	swManager_check_exit_status: worker#2[pid=16136] abnormal exit, status=255, signal=0
+[2020-02-13 16:07:40 *16137.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Class 'App\WebSockets\Controller\Base' not found in /data/swoole/App/WebSocket/Controller/Index.php on line 16
+[2020-02-13 16:07:40 $16106.0]	WARNING	swManager_check_exit_status: worker#2[pid=16137] abnormal exit, status=255, signal=0
+[2020-02-13 16:07:40 *16153.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Class 'App\WebSockets\Controller\Base' not found in /data/swoole/App/WebSocket/Controller/Index.php on line 16
+[2020-02-13 16:07:40 $16106.0]	WARNING	swManager_check_exit_status: worker#2[pid=16153] abnormal exit, status=255, signal=0
+[2020-02-13 16:07:40 *16154.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Class 'App\WebSockets\Controller\Base' not found in /data/swoole/App/WebSocket/Controller/Index.php on line 16
+[2020-02-13 16:07:40 $16106.0]	WARNING	swManager_check_exit_status: worker#2[pid=16154] abnormal exit, status=255, signal=0
+[2020-02-13 16:23:23 *18437.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Class 'App\WebSocket\Controller\Common' not found in /data/swoole/App/WebSocket/Controller/Test.php on line 11
+[2020-02-13 16:23:23 $18433.0]	WARNING	swManager_check_exit_status: worker#2[pid=18437] abnormal exit, status=255, signal=0
+[2020-02-13 16:23:23 *18462.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Class 'App\WebSocket\Controller\Common' not found in /data/swoole/App/WebSocket/Controller/Test.php on line 11
+[2020-02-13 16:23:23 $18433.0]	WARNING	swManager_check_exit_status: worker#2[pid=18462] abnormal exit, status=255, signal=0
+[2020-02-13 16:23:24 *18463.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Class 'App\WebSocket\Controller\Common' not found in /data/swoole/App/WebSocket/Controller/Test.php on line 11
+[2020-02-13 16:23:24 $18433.0]	WARNING	swManager_check_exit_status: worker#2[pid=18463] abnormal exit, status=255, signal=0
+[2020-02-13 16:23:24 *18464.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Class 'App\WebSocket\Controller\Common' not found in /data/swoole/App/WebSocket/Controller/Test.php on line 11
+[2020-02-13 16:23:24 $18433.0]	WARNING	swManager_check_exit_status: worker#2[pid=18464] abnormal exit, status=255, signal=0
+[2020-02-13 16:23:24 *18465.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Class 'App\WebSocket\Controller\Common' not found in /data/swoole/App/WebSocket/Controller/Test.php on line 11
+[2020-02-13 16:23:24 $18433.0]	WARNING	swManager_check_exit_status: worker#2[pid=18465] abnormal exit, status=255, signal=0
+[2020-02-13 16:27:49 *19056.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Class 'App\Storage\OnlineUser' not found in /data/swoole/App/WebSocket/Controller/Base.php:34
+Stack trace:
+#0 /data/swoole/App/WebSocket/Controller/Index.php(24): App\WebSocket\Controller\Base->currentUser()
+#1 /data/swoole/vendor/easyswoole/socket/src/AbstractInterface/Controller.php(124): App\WebSocket\Controller\Index->info()
+#2 /data/swoole/vendor/easyswoole/socket/src/Dispatcher.php(82): EasySwoole\Socket\AbstractInterface\Controller->__hook(Object(Swoole\WebSocket\Server), Object(EasySwoole\Socket\Config), Object(EasySwoole\Socket\Bean\Caller), Object(EasySwoole\Socket\Bean\Response))
+#3 /data/swoole/EasySwooleEvent.php(39): EasySwoole\Socket\Dispatcher->dispatch(Object(Swoole\WebSocket\Server), '{"class":"Index...', Object(Swoole\WebSocket\Frame))
+#4 [internal function]: EasySwoole\EasySwoole\EasySwooleEvent::EasySwoole\EasySwoole\{closure}(Object(Swoole\WebSocket\Server), Object(Swoole\WebSocket\Frame))
+#5 /data/swoole/vendor/easyswoole/easyswoole/src/ServerManager.php(134): call_user_ in /data/swoole/App/WebSocket/Controller/Base.php on line 34
+[2020-02-13 16:27:49 $19052.0]	WARNING	swManager_check_exit_status: worker#2[pid=19056] abnormal exit, status=255, signal=0
+[2020-02-13 16:29:50 *19337.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Class 'App\Storage\OnlineUser' not found in /data/swoole/App/WebSocket/Controller/Base.php:34
+Stack trace:
+#0 /data/swoole/App/WebSocket/Controller/Index.php(24): App\WebSocket\Controller\Base->currentUser()
+#1 /data/swoole/vendor/easyswoole/socket/src/AbstractInterface/Controller.php(124): App\WebSocket\Controller\Index->info()
+#2 /data/swoole/vendor/easyswoole/socket/src/Dispatcher.php(82): EasySwoole\Socket\AbstractInterface\Controller->__hook(Object(Swoole\WebSocket\Server), Object(EasySwoole\Socket\Config), Object(EasySwoole\Socket\Bean\Caller), Object(EasySwoole\Socket\Bean\Response))
+#3 /data/swoole/EasySwooleEvent.php(39): EasySwoole\Socket\Dispatcher->dispatch(Object(Swoole\WebSocket\Server), '{"class":"Index...', Object(Swoole\WebSocket\Frame))
+#4 [internal function]: EasySwoole\EasySwoole\EasySwooleEvent::EasySwoole\EasySwoole\{closure}(Object(Swoole\WebSocket\Server), Object(Swoole\WebSocket\Frame))
+#5 /data/swoole/vendor/easyswoole/easyswoole/src/ServerManager.php(134): call_user_ in /data/swoole/App/WebSocket/Controller/Base.php on line 34
+[2020-02-13 16:29:50 $19333.0]	WARNING	swManager_check_exit_status: worker#2[pid=19337] abnormal exit, status=255, signal=0
+[2020-02-13 16:32:13 *19677.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Class 'App\Storage\OnlineUser' not found in /data/swoole/App/WebSocket/Controller/Base.php:34
+Stack trace:
+#0 /data/swoole/App/WebSocket/Controller/Index.php(24): App\WebSocket\Controller\Base->currentUser()
+#1 /data/swoole/vendor/easyswoole/socket/src/AbstractInterface/Controller.php(124): App\WebSocket\Controller\Index->info()
+#2 /data/swoole/vendor/easyswoole/socket/src/Dispatcher.php(82): EasySwoole\Socket\AbstractInterface\Controller->__hook(Object(Swoole\WebSocket\Server), Object(EasySwoole\Socket\Config), Object(EasySwoole\Socket\Bean\Caller), Object(EasySwoole\Socket\Bean\Response))
+#3 /data/swoole/EasySwooleEvent.php(39): EasySwoole\Socket\Dispatcher->dispatch(Object(Swoole\WebSocket\Server), '{"class":"Index...', Object(Swoole\WebSocket\Frame))
+#4 [internal function]: EasySwoole\EasySwoole\EasySwooleEvent::EasySwoole\EasySwoole\{closure}(Object(Swoole\WebSocket\Server), Object(Swoole\WebSocket\Frame))
+#5 /data/swoole/vendor/easyswoole/easyswoole/src/ServerManager.php(134): call_user_ in /data/swoole/App/WebSocket/Controller/Base.php on line 34
+[2020-02-13 16:32:13 $19672.0]	WARNING	swManager_check_exit_status: worker#2[pid=19677] abnormal exit, status=255, signal=0
+[2020-02-14 20:22:54 *15119.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Class 'App\WebSocket\Gravatar' not found in /data/swoole/App/WebSocket/WebSocketEvents.php:38
+Stack trace:
+#0 [internal function]: App\WebSocket\WebSocketEvents::onOpen(Object(Swoole\WebSocket\Server), Object(Swoole\Http\Request))
+#1 /data/swoole/vendor/easyswoole/easyswoole/src/ServerManager.php(134): call_user_func(Array, Object(Swoole\WebSocket\Server), Object(Swoole\Http\Request))
+#2 {main}
+  thrown in /data/swoole/App/WebSocket/WebSocketEvents.php on line 38
+[2020-02-14 20:22:54 $15115.0]	WARNING	swManager_check_exit_status: worker#2[pid=15119] abnormal exit, status=255, signal=0
+[2020-02-14 20:23:54 *15256.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Class 'App\WebSocket\Gravatar' not found in /data/swoole/App/WebSocket/WebSocketEvents.php:38
+Stack trace:
+#0 [internal function]: App\WebSocket\WebSocketEvents::onOpen(Object(Swoole\WebSocket\Server), Object(Swoole\Http\Request))
+#1 /data/swoole/vendor/easyswoole/easyswoole/src/ServerManager.php(134): call_user_func(Array, Object(Swoole\WebSocket\Server), Object(Swoole\Http\Request))
+#2 {main}
+  thrown in /data/swoole/App/WebSocket/WebSocketEvents.php on line 38
+[2020-02-14 20:23:54 $15252.0]	WARNING	swManager_check_exit_status: worker#2[pid=15256] abnormal exit, status=255, signal=0
+[2020-02-14 20:28:04 *15817.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Class 'App\WebSocket\Actions\User\UserInfo' not found in /data/swoole/App/WebSocket/Controller/Index.php:26
+Stack trace:
+#0 /data/swoole/vendor/easyswoole/socket/src/AbstractInterface/Controller.php(124): App\WebSocket\Controller\Index->info()
+#1 /data/swoole/vendor/easyswoole/socket/src/Dispatcher.php(82): EasySwoole\Socket\AbstractInterface\Controller->__hook(Object(Swoole\WebSocket\Server), Object(EasySwoole\Socket\Config), Object(EasySwoole\Socket\Bean\Caller), Object(EasySwoole\Socket\Bean\Response))
+#2 /data/swoole/EasySwooleEvent.php(39): EasySwoole\Socket\Dispatcher->dispatch(Object(Swoole\WebSocket\Server), '{"class":"Index...', Object(Swoole\WebSocket\Frame))
+#3 [internal function]: EasySwoole\EasySwoole\EasySwooleEvent::EasySwoole\EasySwoole\{closure}(Object(Swoole\WebSocket\Server), Object(Swoole\WebSocket\Frame))
+#4 /data/swoole/vendor/easyswoole/easyswoole/src/ServerManager.php(134): call_user_func(Object(Closure), Object(Swoole\WebSocket\Server), Object(Swoole\WebSocket\Frame))
+ in /data/swoole/App/WebSocket/Controller/Index.php on line 26
+[2020-02-14 20:28:04 $15813.0]	WARNING	swManager_check_exit_status: worker#2[pid=15817] abnormal exit, status=255, signal=0
+[2020-02-16 19:01:46 *25499.6]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-02-16 19:01:46 *25498.5]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-02-16 19:01:46 *25497.4]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-02-16 19:01:46 *25496.3]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-02-16 19:01:46 *25495.2]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-02-16 19:01:46 *25494.1]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-02-16 19:01:46 *25493.0]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-02-16 19:01:46 $25487.0]	WARNING	swSignal_callback (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-02-16 19:01:46 $25487.0]	WARNING	swManager_check_exit_status: worker#8[pid=25501] abnormal exit, status=0, signal=1
+[2020-02-16 19:01:46 #25486.1]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-02-16 19:01:46 *25500.7]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-02-16 19:01:46 $25487.0]	WARNING	swManager_check_exit_status: worker#9[pid=25502] abnormal exit, status=0, signal=1
+[2020-02-16 19:01:46 $25487.0]	WARNING	swManager_check_exit_status: worker#10[pid=25503] abnormal exit, status=0, signal=1
+[2020-02-16 19:01:46 $25487.0]	WARNING	swManager_check_exit_status: worker#11[pid=25504] abnormal exit, status=0, signal=1
+[2020-02-16 21:36:01 *25493.0]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-02-24 14:00:26 *6694.6]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-02-24 14:00:26 *6693.5]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-02-24 14:00:26 *6692.4]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-02-24 14:00:26 *6691.3]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-02-24 14:00:26 *6690.2]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-02-24 14:00:26 *6689.1]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-02-24 14:00:26 *6688.0]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-02-24 14:00:26 *6695.7]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-02-24 14:00:26 $6686.0]	WARNING	swManager_check_exit_status: worker#9[pid=6697] abnormal exit, status=0, signal=1
+[2020-02-24 14:00:26 #6685.1]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-02-24 14:00:26 $6686.0]	WARNING	swManager_check_exit_status: worker#10[pid=6698] abnormal exit, status=0, signal=1
+[2020-02-24 14:00:26 $6686.0]	WARNING	swManager_check_exit_status: worker#11[pid=6699] abnormal exit, status=0, signal=1
+[2020-02-25 05:50:46 *6690.2]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-02-25 10:05:17 *6693.5]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-02-25 12:30:36 *6688.0]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-02-25 12:30:42 *462.0]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-02-25 12:30:42 *6689.1]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-02-25 12:30:44 *475.1]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-02-25 12:30:44 *30175.2]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-02-25 12:31:02 *6695.7]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-02-26 14:24:49 *28959.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Class 'App\Storage\OnlineSquareUser' not found in /data/swoole/App/WebSocket/WebSocketEvents.php:50
+Stack trace:
+#0 [internal function]: App\WebSocket\WebSocketEvents::onOpen(Object(Swoole\WebSocket\Server), Object(Swoole\Http\Request))
+#1 /data/swoole/vendor/easyswoole/easyswoole/src/ServerManager.php(134): call_user_func(Array, Object(Swoole\WebSocket\Server), Object(Swoole\Http\Request))
+#2 {main}
+  thrown in /data/swoole/App/WebSocket/WebSocketEvents.php on line 50
+[2020-02-26 14:24:49 $28955.0]	WARNING	swManager_check_exit_status: worker#2[pid=28959] abnormal exit, status=255, signal=0
+[2020-02-26 14:24:53 *28982.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Class 'App\WebSocket\OnlineUser' not found in /data/swoole/App/WebSocket/WebSocketEvents.php:93
+Stack trace:
+#0 [internal function]: App\WebSocket\WebSocketEvents::onClose(Object(Swoole\WebSocket\Server), 3, 0)
+#1 /data/swoole/vendor/easyswoole/easyswoole/src/ServerManager.php(134): call_user_func(Array, Object(Swoole\WebSocket\Server), 3, 0)
+#2 {main}
+  thrown in /data/swoole/App/WebSocket/WebSocketEvents.php on line 93
+[2020-02-26 14:24:53 $28955.0]	WARNING	swManager_check_exit_status: worker#2[pid=28982] abnormal exit, status=255, signal=0
+[2020-02-26 14:24:53 *28960.3]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Class 'App\Storage\OnlineSquareUser' not found in /data/swoole/App/WebSocket/WebSocketEvents.php:50
+Stack trace:
+#0 [internal function]: App\WebSocket\WebSocketEvents::onOpen(Object(Swoole\WebSocket\Server), Object(Swoole\Http\Request))
+#1 /data/swoole/vendor/easyswoole/easyswoole/src/ServerManager.php(134): call_user_func(Array, Object(Swoole\WebSocket\Server), Object(Swoole\Http\Request))
+#2 {main}
+  thrown in /data/swoole/App/WebSocket/WebSocketEvents.php on line 50
+[2020-02-26 14:24:53 $28955.0]	WARNING	swManager_check_exit_status: worker#3[pid=28960] abnormal exit, status=255, signal=0
+[2020-02-26 14:24:55 *28989.3]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Class 'App\WebSocket\OnlineUser' not found in /data/swoole/App/WebSocket/WebSocketEvents.php:93
+Stack trace:
+#0 [internal function]: App\WebSocket\WebSocketEvents::onClose(Object(Swoole\WebSocket\Server), 4, 0)
+#1 /data/swoole/vendor/easyswoole/easyswoole/src/ServerManager.php(134): call_user_func(Array, Object(Swoole\WebSocket\Server), 4, 0)
+#2 {main}
+  thrown in /data/swoole/App/WebSocket/WebSocketEvents.php on line 93
+[2020-02-26 14:24:55 $28955.0]	WARNING	swManager_check_exit_status: worker#3[pid=28989] abnormal exit, status=255, signal=0
+[2020-02-26 14:24:56 *28961.4]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Class 'App\Storage\OnlineSquareUser' not found in /data/swoole/App/WebSocket/WebSocketEvents.php:50
+Stack trace:
+#0 [internal function]: App\WebSocket\WebSocketEvents::onOpen(Object(Swoole\WebSocket\Server), Object(Swoole\Http\Request))
+#1 /data/swoole/vendor/easyswoole/easyswoole/src/ServerManager.php(134): call_user_func(Array, Object(Swoole\WebSocket\Server), Object(Swoole\Http\Request))
+#2 {main}
+  thrown in /data/swoole/App/WebSocket/WebSocketEvents.php on line 50
+[2020-02-26 14:24:56 $28955.0]	WARNING	swManager_check_exit_status: worker#4[pid=28961] abnormal exit, status=255, signal=0
+[2020-02-26 14:24:57 *28997.4]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Class 'App\WebSocket\OnlineUser' not found in /data/swoole/App/WebSocket/WebSocketEvents.php:93
+Stack trace:
+#0 [internal function]: App\WebSocket\WebSocketEvents::onClose(Object(Swoole\WebSocket\Server), 5, 0)
+#1 /data/swoole/vendor/easyswoole/easyswoole/src/ServerManager.php(134): call_user_func(Array, Object(Swoole\WebSocket\Server), 5, 0)
+#2 {main}
+  thrown in /data/swoole/App/WebSocket/WebSocketEvents.php on line 93
+[2020-02-26 14:24:57 $28955.0]	WARNING	swManager_check_exit_status: worker#4[pid=28997] abnormal exit, status=255, signal=0
+[2020-02-26 14:24:57 *28962.5]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Class 'App\Storage\OnlineSquareUser' not found in /data/swoole/App/WebSocket/WebSocketEvents.php:50
+Stack trace:
+#0 [internal function]: App\WebSocket\WebSocketEvents::onOpen(Object(Swoole\WebSocket\Server), Object(Swoole\Http\Request))
+#1 /data/swoole/vendor/easyswoole/easyswoole/src/ServerManager.php(134): call_user_func(Array, Object(Swoole\WebSocket\Server), Object(Swoole\Http\Request))
+#2 {main}
+  thrown in /data/swoole/App/WebSocket/WebSocketEvents.php on line 50
+[2020-02-26 14:24:57 $28955.0]	WARNING	swManager_check_exit_status: worker#5[pid=28962] abnormal exit, status=255, signal=0
+[2020-02-26 14:25:45 *29084.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Class 'App\WebSocket\OnlineUser' not found in /data/swoole/App/WebSocket/WebSocketEvents.php:93
+Stack trace:
+#0 [internal function]: App\WebSocket\WebSocketEvents::onClose(Object(Swoole\WebSocket\Server), 3, 0)
+#1 /data/swoole/vendor/easyswoole/easyswoole/src/ServerManager.php(134): call_user_func(Array, Object(Swoole\WebSocket\Server), 3, 0)
+#2 {main}
+  thrown in /data/swoole/App/WebSocket/WebSocketEvents.php on line 93
+[2020-02-26 14:25:45 $29080.0]	WARNING	swManager_check_exit_status: worker#2[pid=29084] abnormal exit, status=255, signal=0
+[2020-02-26 14:25:53 *29085.3]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Class 'App\WebSocket\OnlineUser' not found in /data/swoole/App/WebSocket/WebSocketEvents.php:93
+Stack trace:
+#0 [internal function]: App\WebSocket\WebSocketEvents::onClose(Object(Swoole\WebSocket\Server), 5, 0)
+#1 /data/swoole/vendor/easyswoole/easyswoole/src/ServerManager.php(134): call_user_func(Array, Object(Swoole\WebSocket\Server), 5, 0)
+#2 {main}
+  thrown in /data/swoole/App/WebSocket/WebSocketEvents.php on line 93
+[2020-02-26 14:25:53 $29080.0]	WARNING	swManager_check_exit_status: worker#3[pid=29085] abnormal exit, status=255, signal=0
+[2020-02-26 14:25:59 *29086.4]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Class 'App\WebSocket\OnlineUser' not found in /data/swoole/App/WebSocket/WebSocketEvents.php:93
+Stack trace:
+#0 [internal function]: App\WebSocket\WebSocketEvents::onClose(Object(Swoole\WebSocket\Server), 6, 0)
+#1 /data/swoole/vendor/easyswoole/easyswoole/src/ServerManager.php(134): call_user_func(Array, Object(Swoole\WebSocket\Server), 6, 0)
+#2 {main}
+  thrown in /data/swoole/App/WebSocket/WebSocketEvents.php on line 93
+[2020-02-26 14:25:59 $29080.0]	WARNING	swManager_check_exit_status: worker#4[pid=29086] abnormal exit, status=255, signal=0
+[2020-02-26 14:26:05 *29087.5]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Class 'App\WebSocket\OnlineUser' not found in /data/swoole/App/WebSocket/WebSocketEvents.php:93
+Stack trace:
+#0 [internal function]: App\WebSocket\WebSocketEvents::onClose(Object(Swoole\WebSocket\Server), 8, 0)
+#1 /data/swoole/vendor/easyswoole/easyswoole/src/ServerManager.php(134): call_user_func(Array, Object(Swoole\WebSocket\Server), 8, 0)
+#2 {main}
+  thrown in /data/swoole/App/WebSocket/WebSocketEvents.php on line 93
+[2020-02-26 14:26:05 $29080.0]	WARNING	swManager_check_exit_status: worker#5[pid=29087] abnormal exit, status=255, signal=0
+[2020-02-26 14:41:46 *32553.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Class 'App\WebSocket\OnlineUser' not found in /data/swoole/App/WebSocket/WebSocketEvents.php:107
+Stack trace:
+#0 [internal function]: App\WebSocket\WebSocketEvents::onClose(Object(Swoole\WebSocket\Server), 3, 0)
+#1 /data/swoole/vendor/easyswoole/easyswoole/src/ServerManager.php(134): call_user_func(Array, Object(Swoole\WebSocket\Server), 3, 0)
+#2 {main}
+  thrown in /data/swoole/App/WebSocket/WebSocketEvents.php on line 107
+[2020-02-26 14:41:46 $32549.0]	WARNING	swManager_check_exit_status: worker#2[pid=32553] abnormal exit, status=255, signal=0
+[2020-02-26 14:45:40 *519.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Class 'App\WebSocket\OnlineSquareUser' not found in /data/swoole/App/WebSocket/WebSocketEvents.php:107
+Stack trace:
+#0 [internal function]: App\WebSocket\WebSocketEvents::onClose(Object(Swoole\WebSocket\Server), 3, 0)
+#1 /data/swoole/vendor/easyswoole/easyswoole/src/ServerManager.php(134): call_user_func(Array, Object(Swoole\WebSocket\Server), 3, 0)
+#2 {main}
+  thrown in /data/swoole/App/WebSocket/WebSocketEvents.php on line 107
+[2020-02-26 14:45:40 $515.0]	WARNING	swManager_check_exit_status: worker#2[pid=519] abnormal exit, status=255, signal=0
+[2020-02-26 14:53:36 *1869.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Class 'App\WebSocket\OnlineSquareUser' not found in /data/swoole/App/WebSocket/WebSocketEvents.php:108
+Stack trace:
+#0 [internal function]: App\WebSocket\WebSocketEvents::onClose(Object(Swoole\WebSocket\Server), 3, 0)
+#1 /data/swoole/vendor/easyswoole/easyswoole/src/ServerManager.php(134): call_user_func(Array, Object(Swoole\WebSocket\Server), 3, 0)
+#2 {main}
+  thrown in /data/swoole/App/WebSocket/WebSocketEvents.php on line 108
+[2020-02-26 14:53:37 $1865.0]	WARNING	swManager_check_exit_status: worker#2[pid=1869] abnormal exit, status=255, signal=0
+[2020-02-26 14:53:39 *1870.3]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Class 'App\WebSocket\OnlineSquareUser' not found in /data/swoole/App/WebSocket/WebSocketEvents.php:108
+Stack trace:
+#0 [internal function]: App\WebSocket\WebSocketEvents::onClose(Object(Swoole\WebSocket\Server), 4, 0)
+#1 /data/swoole/vendor/easyswoole/easyswoole/src/ServerManager.php(134): call_user_func(Array, Object(Swoole\WebSocket\Server), 4, 0)
+#2 {main}
+  thrown in /data/swoole/App/WebSocket/WebSocketEvents.php on line 108
+[2020-02-26 14:53:39 $1865.0]	WARNING	swManager_check_exit_status: worker#3[pid=1870] abnormal exit, status=255, signal=0
+[2020-02-26 14:53:41 *1871.4]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Class 'App\WebSocket\OnlineSquareUser' not found in /data/swoole/App/WebSocket/WebSocketEvents.php:108
+Stack trace:
+#0 [internal function]: App\WebSocket\WebSocketEvents::onClose(Object(Swoole\WebSocket\Server), 5, 0)
+#1 /data/swoole/vendor/easyswoole/easyswoole/src/ServerManager.php(134): call_user_func(Array, Object(Swoole\WebSocket\Server), 5, 0)
+#2 {main}
+  thrown in /data/swoole/App/WebSocket/WebSocketEvents.php on line 108
+[2020-02-26 14:53:41 $1865.0]	WARNING	swManager_check_exit_status: worker#4[pid=1871] abnormal exit, status=255, signal=0
+[2020-02-26 14:53:44 *1872.5]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Class 'App\WebSocket\OnlineSquareUser' not found in /data/swoole/App/WebSocket/WebSocketEvents.php:108
+Stack trace:
+#0 [internal function]: App\WebSocket\WebSocketEvents::onClose(Object(Swoole\WebSocket\Server), 6, 0)
+#1 /data/swoole/vendor/easyswoole/easyswoole/src/ServerManager.php(134): call_user_func(Array, Object(Swoole\WebSocket\Server), 6, 0)
+#2 {main}
+  thrown in /data/swoole/App/WebSocket/WebSocketEvents.php on line 108
+[2020-02-26 14:53:44 $1865.0]	WARNING	swManager_check_exit_status: worker#5[pid=1872] abnormal exit, status=255, signal=0
+[2020-02-27 11:34:00 *14559.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Class 'App\Storage\OnlineUser' not found in /data/swoole/App/WebSocket/Controller/Base.php:34
+Stack trace:
+#0 /data/swoole/App/WebSocket/Controller/Index.php(24): App\WebSocket\Controller\Base->currentUser()
+#1 /data/swoole/vendor/easyswoole/socket/src/AbstractInterface/Controller.php(124): App\WebSocket\Controller\Index->info()
+#2 /data/swoole/vendor/easyswoole/socket/src/Dispatcher.php(82): EasySwoole\Socket\AbstractInterface\Controller->__hook(Object(Swoole\WebSocket\Server), Object(EasySwoole\Socket\Config), Object(EasySwoole\Socket\Bean\Caller), Object(EasySwoole\Socket\Bean\Response))
+#3 /data/swoole/EasySwooleEvent.php(44): EasySwoole\Socket\Dispatcher->dispatch(Object(Swoole\WebSocket\Server), '{"channel":"1",...', Object(Swoole\WebSocket\Frame))
+#4 [internal function]: EasySwoole\EasySwoole\EasySwooleEvent::EasySwoole\EasySwoole\{closure}(Object(Swoole\WebSocket\Server), Object(Swoole\WebSocket\Frame))
+#5 /data/swoole/vendor/easyswoole/easyswoole/src/ServerManager.php(134): call_user_ in /data/swoole/App/WebSocket/Controller/Base.php on line 34
+[2020-02-27 11:34:00 $14555.0]	WARNING	swManager_check_exit_status: worker#2[pid=14559] abnormal exit, status=255, signal=0
+[2020-02-27 11:36:24 *23629.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Class 'App\Storage\OnlineUser' not found in /data/swoole/App/WebSocket/Controller/Base.php:36
+Stack trace:
+#0 /data/swoole/App/WebSocket/Controller/Index.php(24): App\WebSocket\Controller\Base->currentUser()
+#1 /data/swoole/vendor/easyswoole/socket/src/AbstractInterface/Controller.php(124): App\WebSocket\Controller\Index->info()
+#2 /data/swoole/vendor/easyswoole/socket/src/Dispatcher.php(82): EasySwoole\Socket\AbstractInterface\Controller->__hook(Object(Swoole\WebSocket\Server), Object(EasySwoole\Socket\Config), Object(EasySwoole\Socket\Bean\Caller), Object(EasySwoole\Socket\Bean\Response))
+#3 /data/swoole/EasySwooleEvent.php(44): EasySwoole\Socket\Dispatcher->dispatch(Object(Swoole\WebSocket\Server), '{"channel":"1",...', Object(Swoole\WebSocket\Frame))
+#4 [internal function]: EasySwoole\EasySwoole\EasySwooleEvent::EasySwoole\EasySwoole\{closure}(Object(Swoole\WebSocket\Server), Object(Swoole\WebSocket\Frame))
+#5 /data/swoole/vendor/easyswoole/easyswoole/src/ServerManager.php(134): call_user_ in /data/swoole/App/WebSocket/Controller/Base.php on line 36
+[2020-02-27 11:36:24 $23625.0]	WARNING	swManager_check_exit_status: worker#2[pid=23629] abnormal exit, status=255, signal=0
+[2020-02-29 11:28:06 *3014.2]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught ArgumentCountError: Too few arguments to function App\WebSocket\WebSocketEvents::onClose(), 3 passed and exactly 4 expected in /data/swoole/App/WebSocket/WebSocketEvents.php:90
+Stack trace:
+#0 [internal function]: App\WebSocket\WebSocketEvents::onClose(Object(Swoole\WebSocket\Server), 3, 0)
+#1 /data/swoole/vendor/easyswoole/easyswoole/src/ServerManager.php(134): call_user_func(Array, Object(Swoole\WebSocket\Server), 3, 0)
+#2 {main}
+  thrown in /data/swoole/App/WebSocket/WebSocketEvents.php on line 90
+[2020-02-29 11:28:06 $3010.0]	WARNING	swManager_check_exit_status: worker#2[pid=3014] abnormal exit, status=255, signal=0
+[2020-02-29 11:28:22 *3013.1]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught ArgumentCountError: Too few arguments to function App\WebSocket\WebSocketEvents::onClose(), 3 passed and exactly 4 expected in /data/swoole/App/WebSocket/WebSocketEvents.php:90
+Stack trace:
+#0 [internal function]: App\WebSocket\WebSocketEvents::onClose(Object(Swoole\WebSocket\Server), 2, 0)
+#1 /data/swoole/vendor/easyswoole/easyswoole/src/ServerManager.php(134): call_user_func(Array, Object(Swoole\WebSocket\Server), 2, 0)
+#2 {main}
+  thrown in /data/swoole/App/WebSocket/WebSocketEvents.php on line 90
+[2020-02-29 11:28:22 $3010.0]	WARNING	swManager_check_exit_status: worker#1[pid=3013] abnormal exit, status=255, signal=0
+[2020-03-01 08:54:21 *10081.7]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-03-01 08:54:21 *10074.0]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-03-01 08:54:21 *10076.2]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-03-01 08:54:21 *10077.3]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-03-01 08:54:21 *10078.4]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-03-01 08:54:21 #10071.1]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-03-01 08:54:21 *10075.1]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-03-01 08:54:21 *10079.5]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-03-01 08:54:21 *10080.6]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-03-01 08:54:21 $10072.0]	WARNING	swManager_check_exit_status: worker#8[pid=10082] abnormal exit, status=0, signal=1
+[2020-03-01 08:54:21 $10072.0]	WARNING	swManager_check_exit_status: worker#10[pid=10089] abnormal exit, status=0, signal=1
+[2020-03-01 08:54:21 $10072.0]	WARNING	swManager_check_exit_status: worker#11[pid=10090] abnormal exit, status=0, signal=1
+[2020-03-01 21:31:59 *10076.2]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-03-01 21:32:11 *10075.1]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-03-01 21:32:11 *25040.2]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-03-01 21:32:11 *10078.4]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-03-02 13:53:19 *26534.6]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-03-02 13:53:19 #26525.1]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-03-02 13:53:19 *26535.7]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-03-02 13:53:19 *26528.0]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-03-02 13:53:19 *26531.3]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-03-02 13:53:19 *26532.4]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-03-02 13:53:19 *26529.1]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-03-02 13:53:19 *26533.5]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-03-02 13:53:19 *26530.2]	WARNING	swSignalfd_onSignal (ERRNO 707): Unable to find callback function for signal Hangup: 1
+[2020-03-02 13:53:19 $26526.0]	WARNING	swManager_check_exit_status: worker#8[pid=26536] abnormal exit, status=0, signal=1
+[2020-03-02 13:53:19 $26526.0]	WARNING	swManager_check_exit_status: worker#9[pid=26537] abnormal exit, status=0, signal=1
+[2020-03-02 13:53:19 $26526.0]	WARNING	swManager_check_exit_status: worker#10[pid=26538] abnormal exit, status=0, signal=1
+[2020-03-02 13:53:19 $26526.0]	WARNING	swManager_check_exit_status: worker#11[pid=26539] abnormal exit, status=0, signal=1
+[2020-03-03 01:50:40 *26528.0]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-03-03 01:50:40 *26529.1]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-03-03 01:50:41 *26530.2]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-03-07 06:24:28 *26531.3]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-03-07 06:24:28 *26532.4]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-03-07 06:24:28 *26533.5]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-03-08 19:58:41 *26534.6]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-03-11 14:06:11 *3695.1]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-03-11 14:06:38 *3694.0]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-03-11 14:07:01 *11752.1]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-03-11 14:11:28 *26535.7]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-03-12 10:05:16 *3700.2]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-03-12 11:01:57 *20468.3]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-03-13 00:26:04 *20469.4]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-03-13 16:48:05 *20470.5]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-03-14 14:46:20 *759.6]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-03-16 08:26:41 *12532.7]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-03-18 08:40:44 *11811.0]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-03-26 00:39:55 *11846.1]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-03-29 07:04:07 *26271.2]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-03-29 18:39:05 *1639.3]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-04-09 05:38:47 *26801.4]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-04-09 18:23:31 *1142.5]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-04-09 18:23:32 *24158.6]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-04-10 04:21:56 *5880.7]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-04-15 10:53:00 *17588.4]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-04-15 10:53:12 *6048.3]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-04-15 10:54:12 *11178.6]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-04-15 10:54:28 *11177.5]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-04-15 10:54:38 *26681.6]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
+[2020-04-15 10:54:40 *26490.4]	NOTICE	php_swoole_server_rshutdown (ERRNO 9003): worker process is terminated by exit()/die()
