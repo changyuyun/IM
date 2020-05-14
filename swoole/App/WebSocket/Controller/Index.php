@@ -42,9 +42,9 @@ class Index extends Base
         $users = array();
 
         foreach ($table as $user) {
-            $users[] = $user;
+            $users["ityun-".$user['fd']] = $user;
         }
-
+        print_r($users);
         if (!empty($users)) {
             $message = new UserOnline($this->currentChannel());
             $message->setList($users);
