@@ -186,8 +186,10 @@
                                 case 202: {
                                     //刷新在线列表
                                     othis.roomUser = data.list;
+                                    break;
                                 }
                             }
+                            console.log(othis.roomUser)
                         } catch (e) {
                             console.warn(e);
                         }
