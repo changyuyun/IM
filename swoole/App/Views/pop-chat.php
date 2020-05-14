@@ -100,7 +100,7 @@
             <div class="windows_input">
                 <div class="am-btn-toolbar">
                     <div class="am-btn-group am-btn-group-xs">
-                        <button type="button" class="am-btn" @click="picture"><i class="am-icon am-icon-picture-o"></i>
+                        <button type="button" class="am-btn"><i class="am-icon am-icon-picture-o"></i>
                         </button>
                         <input type="file" id="fileInput" style="display: none" accept="image/*">
                     </div>
@@ -113,7 +113,7 @@
                     <div class="left"><a href="#" target="_blank">POWER BY Ityun Technology</a>
                     </div>
                     <div class="right">
-                        <button class="send" @click="clickBtnSend">发送消息 ( Enter )</button>
+                        <button class="send">发送消息 ( Enter )</button>
                     </div>
                 </div>
             </div>
