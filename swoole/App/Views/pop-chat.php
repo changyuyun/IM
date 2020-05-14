@@ -168,8 +168,35 @@
                     othis.HeartBeatTimer = setInterval(function () {
                         othis.websocketInstance.send('PING');
                     }, 1000 * 30);
+                    othis.websocketInstance.onmessage = function (ev) {
+                        try {
+
+                        } catch (e) {
+                            console.warn(e);
+                        }
+                    };
+                    othis.websocketInstance.onclose = function (ev) {
+                        othis.doReconnect();
+                    };
+                    othis.websocketInstance.onerror = function(ev) {
+                        othis.doReconnect();
+                    };
                 }
-            }
+            },
+            doReconnect          : function () {
+                var othis = this;
+                clearInterval(othis.HeartBeatTimer);
+                othis.ReconnectBox = layer.msg('已断开，正在重连...', {
+                    scrollbar : false,
+                    shade     : 0.3,
+                    shadeClose: false,
+                    time      : 0,
+                    offset    : 't'
+                });
+                othis.ReconnectTimer = setInterval(function () {
+                    othis.connect();
+                }, 1000)
+            },
         },
         computed: {
 
