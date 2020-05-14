@@ -33,7 +33,7 @@
             </div>
             <div class="online_list">
                 <div class="online_list_header">在线用户</div>
-                <div class="online_item" v-for="user in roomUser" data-fd="user.fd">
+                <div class="online_item" v-for="user in roomUser" data-fd="{{user.fd}}">
                     <!--在线列表排除自己-->
                     <template v-if="user && (currentUser.fd != user.fd)">
                         <i class="am-icon am-icon-check"></i>
