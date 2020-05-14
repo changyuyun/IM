@@ -168,8 +168,11 @@
                     othis.HeartBeatTimer = setInterval(function () {
                         othis.websocketInstance.send('PING');
                     }, 1000 * 30);
+                    /*接收到消息*/
                     othis.websocketInstance.onmessage = function (ev) {
                         try {
+                            var data = JSON.parse(ev.data);
+                            console.log(data);
 
                         } catch (e) {
                             console.warn(e);
