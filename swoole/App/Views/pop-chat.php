@@ -24,7 +24,7 @@
                     </div>
                     <div class="me_status">
                         <div class="me_username">
-                            <i class="am-icon am-icon-pencil" @click="changeName"></i> {{currentUser.username}}
+                             {{currentUser.username}}
                         </div>
                         <div class="me_income">{{currentUser.intro}}</div>
                     </div>
@@ -33,8 +33,8 @@
             </div>
             <div class="online_list">
                 <div class="online_list_header">在线用户</div>
-                <div class="online_item" v-for="user in roomUser">
-                    <template v-if="user">
+                <div class="online_item">
+                    <template>
                         <div class="online_avatar">
                             <img :src="user.avatar" alt="">
                         </div>
