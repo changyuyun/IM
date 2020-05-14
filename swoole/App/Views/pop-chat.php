@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="online_count">
-                <h6>在线数 <span>0</span></h6>
+                <h6>在线数 <span>{{currentCount}}</span></h6>
             </div>
         </div>
         <div class="talk_window">
