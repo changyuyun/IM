@@ -50,7 +50,7 @@
         </div>
         <div class="talk_window">
             <div class="windows_top">
-                <div class="windows_top_left"><i class="am-icon am-icon-list online-list"></i> 欢迎乘坐特快列车</div>
+                <div class="windows_top_left"><i class="am-icon am-icon-list online-list"></i> 点对点聊天系统</div>
                 <div class="windows_top_right">
                     <a href="#" target="_blank"
                        style="color: #999">ityun</a>
