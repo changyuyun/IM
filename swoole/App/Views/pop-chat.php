@@ -139,7 +139,18 @@
             this.connect();
         },
         mounted:function () {
-
+            var othis = this;
+            var textInput = $("#text-input");
+            textInput.on('keydown', function (ev) {
+                if (ev.keyCode == 13 && ev.shiftKey) {
+                    textInput.val(textInput.val() + "\n");
+                    return false;
+                } else if (ev.keyCode == 13) {
+                    othis.clickBtnSend();
+                    ev.preventDefault();
+                    return false;
+                }
+            });
         },
         methods: {
             connect: function () {
