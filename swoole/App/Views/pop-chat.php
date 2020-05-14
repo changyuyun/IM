@@ -211,10 +211,16 @@
             },
         },
         computed: {
-
+            currentCount() {
+                return Object.getOwnPropertyNames(this.roomUser).length - 1;
+            }
         },
         directives: {
-
+            scrollBottom: {
+                componentUpdated: function (el) {
+                    el.scrollTop = el.scrollHeight
+                }
+            }
         }
     });
 </script>
