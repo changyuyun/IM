@@ -34,12 +34,12 @@
             <div class="online_list">
                 <div class="online_list_header">在线用户</div>
                 <div class="online_item" v-for="user in roomUser">
-                    <template v-if="user">
+                    <!--在线列表排除自己-->
+                    <template v-if="user && (currentUser.fd != user.fd)">
                         <div class="online_avatar">
                             <img :src="user.avatar" alt="">
                         </div>
-                        <!--在线列表排除自己-->
-                        <div class="online_status" v-if="currentUser.fd != user.fd">
+                        <div class="online_status">
                             <div class="online_username">{{user.username}}</div>
                         </div>
                     </template>
