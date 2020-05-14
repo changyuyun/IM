@@ -134,6 +134,37 @@
             roomUser         : [{"avatar":"https://www.gravatar.com/avatar/8661f689eba9cb2c6a4305d8046a7e15","username":"yy"}],
             roomChat         : [],
             up_recv_time     : 0
+        },
+        created:function () {
+            this.connect();
+        },
+        mounted:function () {
+
+        },
+        methods: {
+            connect: function () {
+                var othis = this;
+                var websocketServer = this.websocketServer;
+                this.websocketInstance = new WebSocket(websocketServer);
+                this.websocketInstance.onopen = function (ev) {
+                    // 断线重连处理
+                    if (othis.ReconnectBox) {
+                        layer.close(othis.ReconnectBox);
+                        othis.ReconnectBox = null;
+                        clearInterval(othis.ReconnectTimer);
+                    }
+                    // 前端循环心跳 (1min)
+                    othis.HeartBeatTimer = setInterval(function () {
+                        othis.websocketInstance.send('PING');
+                    }, 1000 * 30);
+                }
+            }
+        },
+        computed: {
+
+        },
+        directives: {
+
         }
     });
 </script>
