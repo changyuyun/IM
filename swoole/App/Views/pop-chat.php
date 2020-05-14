@@ -188,6 +188,15 @@
                                     othis.roomUser = data.list;
                                     break;
                                 }
+                                case 204: {
+                                    //新用户上线
+                                    othis.roomUser.push({
+                                        avatar:data.info.avatar,
+                                        fd:data.info.fd,
+                                        username:data.info.username,
+                                        channel:2
+                                    });
+                                }
                             }
                             console.log(othis.roomUser)
                         } catch (e) {
