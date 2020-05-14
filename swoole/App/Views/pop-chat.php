@@ -174,13 +174,13 @@
                             var data = JSON.parse(ev.data);
                             console.log(data);
                             switch (data.action) {
-                                case 10001: {//刷新自己的信息
-                                    othis.currentUser = {
-                                        username: data.username,
-                                        intro: 'ityun technology',
-                                        fd: data.userFd,
-                                        avatar: data.avatar
-                                    }
+                                case 10001: {
+                                    //刷新自己的信息
+                                    othis.currentUser.intro = "ityun technology";
+                                    othis.currentUser.avatar = data.avatar;
+                                    othis.currentUser.fd = data.userFd;
+                                    othis.currentUser.username = data.username;
+                                    break;
                                 }
                             }
                         } catch (e) {
