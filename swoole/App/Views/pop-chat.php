@@ -190,12 +190,17 @@
                                 }
                                 case 204: {
                                     //新用户上线
-                                    othis.roomUser.push({
+                                    var info = {
                                         avatar:data.info.avatar,
                                         fd:data.info.fd,
                                         username:data.info.username,
                                         channel:2
-                                    });
+                                    };
+                                    othis.$set(othis.roomUser, "ityun-" + data.info.fd, info)
+                                }
+                                case 205: {
+                                    //用户离线
+                                    othis.$delete(othis.roomUser, 'ityun-' + data.userFd);
                                 }
                             }
                         } catch (e) {
