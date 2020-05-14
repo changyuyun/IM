@@ -36,6 +36,7 @@
                 <div class="online_item" v-for="user in roomUser">
                     <!--在线列表排除自己-->
                     <template v-if="user && (currentUser.fd != user.fd)">
+                        <i class="am-icon am-icon-check"></i>
                         <div class="online_avatar">
                             <img :src="user.avatar" alt="">
                         </div>
