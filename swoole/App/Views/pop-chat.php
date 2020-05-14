@@ -251,13 +251,29 @@
                 var textInput = $("#text-input");
                 var content = textInput.val();
                 if (content.trim() != '') {
-                    textInput.val('');
+                    if (this.websocketInstance && this.websocketInstance.readyState === 1) {
+                        this.sendTextMessage(content);
+                        textInput.val('');
+                    } else {
+                        layer.tips('连接已断开', '.windows_input', {
+                            tips: [1, '#ff4f4f'],
+                            time: 2000
+                        });
+                    }
+
                 } else {
                     layer.tips('请输入消息内容', '.windows_input', {
                         tips: [1, '#3595CC'],
                         time: 2000
                     });
                 }
+            },
+            /**
+             * 发送文本消息
+             * @param content
+             */
+            sendTextMessage : function (content) {
+                //TODO:实现文本消息的发送
             }
         },
         computed: {
