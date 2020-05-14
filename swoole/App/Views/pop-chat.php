@@ -124,7 +124,7 @@
     var Vm = new Vue({
         el        : '#chat',
         data      : {
-            websocketServer  : "ws://111.229.127.18:9501",
+            websocketServer  : "ws://111.229.127.18:9501?channel=2",
             websocketInstance: undefined,
             Reconnect        : false,
             ReconnectTimer   : null,
