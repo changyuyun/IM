@@ -198,7 +198,6 @@
                                     });
                                 }
                             }
-                            console.log(othis.roomUser)
                         } catch (e) {
                             console.warn(e);
                         }
