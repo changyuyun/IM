@@ -39,10 +39,7 @@
                             <img :src="user.avatar" alt="">
                         </div>
                         <div class="online_status" v-if="{{currentUser.fd}} == {{user.fd}}">
-                            <div class="online_username">{{user.username}}（自己）</div>
-                        </div>
-                        <div class="online_status" v-else>
-                            <div class="online_username">{{user.username}}</div>
+                            <div class="online_username">{{currentUser.fd}}--{{user.fd}}--{{user.username}}</div>
                         </div>
                     </template>
                 </div>
