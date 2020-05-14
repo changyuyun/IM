@@ -115,7 +115,7 @@
                     <div class="left"><a href="#" target="_blank">POWER BY Ityun Technology</a>
                     </div>
                     <div class="right">
-                        <button class="send">发送消息 ( Enter )</button>
+                        <button class="send" @click="clickBtnSend">发送消息 ( Enter )</button>
                     </div>
                 </div>
             </div>
@@ -243,6 +243,22 @@
                 var message = {cmd: cmd, action: action, channel: channel};
                 this.websocketInstance.send(JSON.stringify(message))
             },
+            /**
+             * 发送文本消息
+             * @return void
+             */
+            clickBtnSend : function () {
+                var textInput = $("#text-input");
+                var content = textInput.val();
+                if (content.trim() != '') {
+                    textInput.val('');
+                } else {
+                    layer.tips('请输入消息内容', '.windows_input', {
+                        tips: [1, '#3595CC'],
+                        time: 2000
+                    });
+                }
+            }
         },
         computed: {
             currentCount() {
