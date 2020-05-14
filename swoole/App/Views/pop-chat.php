@@ -130,8 +130,8 @@
             ReconnectTimer   : null,
             HeartBeatTimer   : null,
             ReconnectBox     : null,
-            currentUser      : {username: 'ITYUN', intro: 'ityun tech', fd: 0, avatar: "https://www.gravatar.com/avatar/8661f689eba9cb2c6a4305d8046a7e15"},
-            roomUser         : [{"avatar":"https://www.gravatar.com/avatar/8661f689eba9cb2c6a4305d8046a7e15","username":"yy"}],
+            currentUser      : {},
+            roomUser         : [{"avatar":"https://www.gravatar.com/avatar/8661f689eba9cb2c6a4305d8046a7e15","username":"dev"}],
             roomChat         : [],
             up_recv_time     : 0
         },
@@ -183,6 +183,7 @@
                                     break;
                                 }
                             }
+                            console.log(othis.currentUser)
                         } catch (e) {
                             console.warn(e);
                         }
