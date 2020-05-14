@@ -172,7 +172,6 @@
                     othis.websocketInstance.onmessage = function (ev) {
                         try {
                             var data = JSON.parse(ev.data);
-                            console.log(data);
                             switch (data.action) {
                                 case 10001: {
                                     //刷新自己的信息
@@ -183,7 +182,6 @@
                                     break;
                                 }
                             }
-                            console.log(othis.currentUser)
                         } catch (e) {
                             console.warn(e);
                         }
