@@ -168,6 +168,8 @@
                     othis.HeartBeatTimer = setInterval(function () {
                         othis.websocketInstance.send('PING');
                     }, 1000 * 30);
+                    //主动获取在线列表
+                    othis.release("Index", "online");
                     /*接收到消息*/
                     othis.websocketInstance.onmessage = function (ev) {
                         try {
@@ -194,7 +196,7 @@
                     };
                 }
             },
-            doReconnect          : function () {
+            doReconnect : function () {
                 var othis = this;
                 clearInterval(othis.HeartBeatTimer);
                 othis.ReconnectBox = layer.msg('已断开，正在重连...', {
@@ -207,6 +209,18 @@
                 othis.ReconnectTimer = setInterval(function () {
                     othis.connect();
                 }, 1000)
+            },
+            /**
+             * 向服务器发送消息
+             * @param cmd 请求控制器
+             * @param action 请求操作方法
+             */
+            release : function (cmd, action) {
+                cmd = cmd || 'Index';
+                action = action || 'index';
+                channel = 2;
+                var message = {cmd: cmd, action: action, channel: channel};
+                this.websocketInstance.send(JSON.stringify(message))
             },
         },
         computed: {
