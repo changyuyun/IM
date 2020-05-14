@@ -33,8 +33,8 @@
             </div>
             <div class="online_list">
                 <div class="online_list_header">在线用户</div>
-                <div class="online_item">
-                    <template>
+                <div class="online_item" v-for="user in roomUser">
+                    <template v-if="user">
                         <div class="online_avatar">
                             <img :src="user.avatar" alt="">
                         </div>
