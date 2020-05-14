@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div class="online_list">
-                <div class="online_list_header">车上乘客</div>
+                <div class="online_list_header">在线用户</div>
                 <div class="online_item" v-for="user in roomUser">
                     <template v-if="user">
                         <div class="online_avatar">
@@ -45,15 +45,15 @@
                 </div>
             </div>
             <div class="online_count">
-                <h6>车上乘客 <span>0</span> 位</h6>
+                <h6>在线数 <span>0</span></h6>
             </div>
         </div>
         <div class="talk_window">
             <div class="windows_top">
                 <div class="windows_top_left"><i class="am-icon am-icon-list online-list"></i> 欢迎乘坐特快列车</div>
                 <div class="windows_top_right">
-                    <a href="https://github.com/easy-swoole/demo/tree/3.x-chat" target="_blank"
-                       style="color: #999">查看源码</a>
+                    <a href="#" target="_blank"
+                       style="color: #999">ityun</a>
                 </div>
             </div>
             <div class="windows_body" id="chat-window" v-scroll-bottom>
@@ -110,7 +110,7 @@
                     <textarea name="" id="text-input" cols="30" rows="10" title=""></textarea>
                 </div>
                 <div class="toolbar">
-                    <div class="left"><a href="http://www.easyswoole.com/" target="_blank">POWER BY EASYSWOOLE V3</a>
+                    <div class="left"><a href="http://www.easyswoole.com/" target="_blank">POWER BY Ityun Technology</a>
                     </div>
                     <div class="right">
                         <button class="send" @click="clickBtnSend">发送消息 ( Enter )</button>
