@@ -243,6 +243,12 @@
                 var message = {cmd: cmd, action: action, channel: channel};
                 this.websocketInstance.send(JSON.stringify(message))
             },
+            release_chat : function(cmd, action, channel, content, toUserFd, type) {
+                cmd = cmd || 'Index';
+                action = action || 'index';
+                var message = {cmd: cmd, action: action, channel: channel, content:content, toUserFd:toUserFd, type, type};
+                this.websocketInstance.send(JSON.stringify(message))
+            },
             /**
              * 发送文本消息
              * @return void
@@ -273,7 +279,8 @@
              * @param content
              */
             sendTextMessage : function (content) {
-                //TODO:实现文本消息的发送
+                //TODO:实现获取已选取的用户
+                this.release_chat("PopChat", "chat", 2, content, 17, "text");
             }
         },
         computed: {
