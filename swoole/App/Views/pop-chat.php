@@ -34,7 +34,7 @@
             <div class="online_list">
                 <div class="online_list_header">在线用户</div>
                 <!--在线列表排除自己-->
-                <div class="online_item" v-for="user in roomUser" v-if="user && (currentUser.fd != user.fd)" :data-fd="user.fd">
+                <div class="online_item online-list-active" v-for="user in roomUser" v-if="user && (currentUser.fd != user.fd)" :data-fd="user.fd">
                     <template>
                         <i class="am-icon am-icon-check"></i>
                         <div class="online_avatar">

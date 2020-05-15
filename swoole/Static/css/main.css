@@ -359,6 +359,10 @@ ul {
     display: none;
 }
 
+.online-list-active {
+    background-color: red;
+}
+
 /* ---------------- 响应式适配 ---------------- */
 
 @media only screen and (min-width: 641px ) {
