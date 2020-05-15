@@ -33,8 +33,8 @@
             </div>
             <div class="online_list">
                 <div class="online_list_header">在线用户</div>
+                <!--在线列表排除自己-->
                 <div class="online_item" v-for="user in roomUser" v-if="user && (currentUser.fd != user.fd)" :data-fd="user.fd">
-                    <!--在线列表排除自己-->
                     <template>
                         <i class="am-icon am-icon-check"></i>
                         <div class="online_avatar">
@@ -123,10 +123,11 @@
     </template>
 </div>
 <script>
+    channel = 2;
     var Vm = new Vue({
         el        : '#chat',
         data      : {
-            websocketServer  : "ws://111.229.127.18:9501?channel=2",
+            websocketServer  : "ws://111.229.127.18:9501?channel="+channel,
             websocketInstance: undefined,
             Reconnect        : false,
             ReconnectTimer   : null,
@@ -196,7 +197,7 @@
                                         avatar:data.info.avatar,
                                         fd:data.info.fd,
                                         username:data.info.username,
-                                        channel:2
+                                        channel:channel
                                     };
                                     othis.$set(othis.roomUser, "ityun-" + data.info.fd, info)
                                 }
@@ -239,14 +240,13 @@
             release : function (cmd, action) {
                 cmd = cmd || 'Index';
                 action = action || 'index';
-                channel = 2;
                 var message = {cmd: cmd, action: action, channel: channel};
                 this.websocketInstance.send(JSON.stringify(message))
             },
             release_chat : function(cmd, action, channel, content, toUserFd, type) {
                 cmd = cmd || 'Index';
                 action = action || 'index';
-                var message = {cmd: cmd, action: action, channel: channel, content:content, toUserFd:toUserFd, type, type};
+                var message = {cmd: cmd, action: action, channel: channel, content:content, toUserFd:toUserFd, type:type};
                 this.websocketInstance.send(JSON.stringify(message))
             },
             /**
@@ -280,7 +280,7 @@
              */
             sendTextMessage : function (content) {
                 //TODO:实现获取已选取的用户
-                this.release_chat("PopChat", "chat", 2, content, 17, "text");
+                this.release_chat("PopChat", "chat", channel, content, 17, "text");
             }
         },
         computed: {
