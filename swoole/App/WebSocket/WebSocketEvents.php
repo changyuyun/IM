@@ -52,7 +52,7 @@ class WebSocketEvents
         } else {
             $random = Random::character(8);
             $avatar = Gravatar::makeGravatar($random . '@ityun.com');
-            $username = 'ITYUN' . $random;
+            $username = 'ITYUN-' . $random;
         }
         //根据不同的渠道，存储在线用户
         if ($channel == 1) { //广场聊天
