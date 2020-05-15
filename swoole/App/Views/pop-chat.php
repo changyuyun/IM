@@ -34,7 +34,7 @@
             <div class="online_list">
                 <div class="online_list_header">在线用户</div>
                 <!--在线列表排除自己-->
-                <div class="online_item" v-for="user in roomUser" v-if="user && (currentUser.fd != user.fd)" :data-fd="user.fd" @click="selectUser(user)">
+                <div class="online_item" :class="{ 'online_item_selected' : user.fd == targetUser.fd }" v-for="user in roomUser" v-if="user && (currentUser.fd != user.fd)" :data-fd="user.fd" @click="selectUser(user)">
                     <template>
                         <div class="online_avatar">
                             <img :src="user.avatar" alt="">
@@ -49,7 +49,8 @@
                 <h6>在线数 <span>{{currentCount}}</span></h6>
             </div>
         </div>
-        <!--<div class="talk_window">
+        <!--交谈窗口 start-->
+        <div class="talk_window talk_window_none">
             <div class="windows_top">
                 <div class="windows_top_left"><i class="am-icon am-icon-list online-list"></i> 点对点聊天系统 <span>当前交流用户：{{targetUser.username}}</span></div>
                 <div class="windows_top_right">
@@ -118,11 +119,12 @@
                     </div>
                 </div>
             </div>
-        </div>-->
-
-        <div class="talk_empty_window">
-
         </div>
+        <!--交谈窗口 end-->
+        <!--默认空窗口 start-->
+        <div class="talk_empty_window">
+        </div>
+        <!--默认空窗口 end-->
     </template>
 </div>
 <script>
@@ -286,6 +288,10 @@
                 var othis = this;
                 othis.targetUser.username = user.username;
                 othis.targetUser.fd = user.fd;
+
+                //记录当前交谈方向id
+                othis.currentPop.fd = othis.currentUser.fd;
+                othis.currentPop.targetUserFd = user.fd;
             },
             /**
              * 发送文本消息
