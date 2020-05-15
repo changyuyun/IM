@@ -254,7 +254,9 @@
              * @return void
              */
             selectUser : function(user) {
-                console.log(user);
+                var othis = this;
+                othis.targetUser.username = user.username;
+                othis.targetUser.fd = user.fd;
             },
             /**
              * 发送文本消息
