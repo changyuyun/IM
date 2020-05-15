@@ -119,6 +119,10 @@
                 </div>
             </div>
         </div>-->
+
+        <div class="talk_window">
+
+        </div>
     </template>
 </div>
 <script>
