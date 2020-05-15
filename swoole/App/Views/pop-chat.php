@@ -199,11 +199,26 @@
                                         username:data.info.username,
                                         channel:channel
                                     };
-                                    othis.$set(othis.roomUser, "ityun-" + data.info.fd, info)
+                                    othis.$set(othis.roomUser, "ityun-" + data.info.fd, info);
+                                    break;
                                 }
                                 case 205: {
                                     //用户离线
                                     othis.$delete(othis.roomUser, 'ityun-' + data.userFd);
+                                    break;
+                                }
+                                case 103: {
+                                    //收到用户消息
+                                    var msg = {
+                                        type    : data.type,
+                                        fd      : data.fromUserFd,
+                                        content : data.content,
+                                        avatar  : othis.roomUser['ityun-' + data.fromUserFd].avatar,
+                                        username: othis.roomUser['ityun-' + data.fromUserFd].username,
+                                        sendTime: data.sendTime
+                                    };
+                                    othis.roomChat.push(msg);
+                                    break;
                                 }
                             }
                         } catch (e) {
