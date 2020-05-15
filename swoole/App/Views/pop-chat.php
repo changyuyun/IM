@@ -312,6 +312,18 @@
              */
             sendTextMessage : function (content, toUserFd) {
                 this.release_chat("PopChat", "chat", channel, content, toUserFd, "text");
+                var othis = this;
+                var cUser = this.currentUser;
+                //自己发送的消息
+                var msg = {
+                    type    : "text",
+                    fd      : cUser.fd,
+                    content : content,
+                    avatar  : othis.roomUser['ityun-' + cUser.fd].avatar,
+                    username: othis.roomUser['ityun-' + cUser.fd].username,
+                    sendTime: ""
+                };
+                othis.roomChat.push(msg);
             }
         },
         computed: {
