@@ -34,9 +34,8 @@
             <div class="online_list">
                 <div class="online_list_header">在线用户</div>
                 <!--在线列表排除自己-->
-                <div class="online_item online-list-active" v-for="user in roomUser" v-if="user && (currentUser.fd != user.fd)" :data-fd="user.fd">
+                <div class="online_item" v-for="user in roomUser" v-if="user && (currentUser.fd != user.fd)" :data-fd="user.fd" @click="selectUser(user)">
                     <template>
-                        <i class="am-icon am-icon-check"></i>
                         <div class="online_avatar">
                             <img :src="user.avatar" alt="">
                         </div>
@@ -52,7 +51,7 @@
         </div>
         <div class="talk_window">
             <div class="windows_top">
-                <div class="windows_top_left"><i class="am-icon am-icon-list online-list"></i> 点对点聊天系统</div>
+                <div class="windows_top_left"><i class="am-icon am-icon-list online-list"></i> 点对点聊天系统 <span>当前交流用户：{targetUser.username}</span></div>
                 <div class="windows_top_right">
                     <a href="#" target="_blank"
                        style="color: #999">ityun</a>
@@ -136,6 +135,7 @@
             currentUser      : {username: '-----', intro: '-----------', fd: 0, avatar: 0},
             roomUser         : [],
             roomChat         : [],
+            targetUser       : {username: '-----', fd:0}
             up_recv_time     : 0
         },
         created:function () {
@@ -248,6 +248,13 @@
                 action = action || 'index';
                 var message = {cmd: cmd, action: action, channel: channel, content:content, toUserFd:toUserFd, type:type};
                 this.websocketInstance.send(JSON.stringify(message))
+            },
+            /**
+             * 选择聊天的用户
+             * @return void
+             */
+            selectUser : function(user) {
+                console.log(user);
             },
             /**
              * 发送文本消息
