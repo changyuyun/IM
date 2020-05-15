@@ -269,13 +269,10 @@
                     if (this.websocketInstance && this.websocketInstance.readyState === 1) {
                         var toUserFd = this.targetUser.fd;
                         if (toUserFd == 0) {
-                            layer.msg('请选择交谈用户!', {
-                                scrollbar : false,
-                                shade     : 0.3,
-                                shadeClose: false,
-                                time      : 2000,
-                                offset    : 't'
-                            }
+                            layer.tips('请选择交谈的用户！', '.windows_input', {
+                                tips: [1, '#ff4f4f'],
+                                time: 2000
+                            });
                         } else {
                             this.sendTextMessage(content, toUserFd);
                         }
