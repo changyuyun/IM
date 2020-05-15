@@ -62,16 +62,16 @@
                     <template v-for="chat in roomChat">
                         <template v-if="chat.type === 'tips'">
                             <div class="chat-tips">
-                                <span class="am-badge am-badge-primary am-radius">{{chat.content}}</span></div>
+                                <span class="am-badge am-badge-primary am-radius">{{chat.content}}</span>
+                            </div>
                         </template>
                         <template v-else>
                             <div v-if="chat.sendTime" class="chat-tips">
                                 <span class="am-radius" style="color: #666666">{{chat.sendTime}}</span>
                             </div>
-                            <article class="am-comment" :class="{ 'am-comment-flip' : chat.fd == currentUser.userFd }">
+                            <article class="am-comment" :class="{ 'am-comment-flip' : chat.fd == currentUser.fd }">
                                 <a href="#link-to-user-home">
-                                    <img :src="chat.avatar" alt="" class="am-comment-avatar"
-                                         width="48" height="48"/>
+                                    <img :src="chat.avatar" alt="" class="am-comment-avatar" width="48" height="48"/>
                                 </a>
                                 <div class="am-comment-main">
                                     <header class="am-comment-hd">

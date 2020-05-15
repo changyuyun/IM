@@ -61,7 +61,8 @@
                     <template v-for="chat in roomChat">
                         <template v-if="chat.type === 'tips'">
                             <div class="chat-tips">
-                                <span class="am-badge am-badge-primary am-radius">{{chat.content}}</span></div>
+                                <span class="am-badge am-badge-primary am-radius">{{chat.content}}</span>
+                            </div>
                         </template>
                         <template v-else>
                             <div v-if="chat.sendTime" class="chat-tips">
