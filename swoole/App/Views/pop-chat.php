@@ -143,6 +143,7 @@
             roomChat         : [],
             targetUser       : {username: '-----', fd:0},
             currentPop       : {fd: 0, targetUserFd: 0}, //当前选中的交谈用户 用于切换聊天窗口 fd:当前主人id，targetUserFd:交谈用户id
+            popChatList      : {}, //{"0-0":[{"item":1},{"item":2}]} //点对点交谈记录
             up_recv_time     : 0
         },
         created:function () {
@@ -233,7 +234,15 @@
                                         username: othis.roomUser['ityun-' + data.fromUserFd].username,
                                         sendTime: data.sendTime
                                     };
+
                                     othis.roomChat.push(msg);
+                                    var popKey = othis.currentUser.fd +"-"+ data.fromUserFd;
+                                    if (othis.popChatList.hasOwnProperty(popKey)) {
+                                        othis.popChatList[popKey].push(msg);
+                                    } else {
+                                        othis.$set(othis.popChatList, popKey, msg);
+                                    }
+                                    console.log(othis.popChatList);
                                     break;
                                 }
                             }
