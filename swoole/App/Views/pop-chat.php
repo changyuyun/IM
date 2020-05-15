@@ -50,7 +50,7 @@
             </div>
         </div>
         <!--交谈窗口 start-->
-        <div class="talk_window talk_window_none">
+        <div class="talk_window" :class="{ 'talk_window_none' : targetUser.fd==0 }">
             <div class="windows_top">
                 <div class="windows_top_left"><i class="am-icon am-icon-list online-list"></i> 点对点聊天系统 <span>当前交流用户：{{targetUser.username}}</span></div>
                 <div class="windows_top_right">
@@ -122,7 +122,7 @@
         </div>
         <!--交谈窗口 end-->
         <!--默认空窗口 start-->
-        <div class="talk_empty_window">
+        <div class="talk_empty_window"  :class="{ 'talk_window_none' : targetUser.fd!=0 }">
         </div>
         <!--默认空窗口 end-->
     </template>
