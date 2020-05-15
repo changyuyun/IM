@@ -177,6 +177,13 @@ ul {
     background: #f5f5f5
 }
 
+.talk_empty_window {
+    float: left;
+    width: 610px;
+    height: 100%;
+    background: #dedff0
+}
+
 /* ---------------- 聊天区头部 ---------------- */
 
 .windows_top {

@@ -120,7 +120,7 @@
             </div>
         </div>-->
 
-        <div class="talk_window">
+        <div class="talk_empty_window">
 
         </div>
     </template>
@@ -140,6 +140,7 @@
             roomUser         : [],
             roomChat         : [],
             targetUser       : {username: '-----', fd:0},
+            currentPop       : {fd: 0, targetUserFd: 0}, //当前选中的交谈用户 用于切换聊天窗口 fd:当前主人id，targetUserFd:交谈用户id
             up_recv_time     : 0
         },
         created:function () {
