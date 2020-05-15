@@ -129,6 +129,7 @@
 </div>
 <script>
     channel = 2;
+    popKey = "";
     var Vm = new Vue({
         el        : '#chat',
         data      : {
@@ -237,7 +238,7 @@
                                     othis.roomChat.push(msg);
 
 
-                                    var popKey = othis.currentUser.fd +"-"+ data.fromUserFd;
+                                    popKey = othis.currentUser.fd +"-"+ data.fromUserFd;
                                     if (!othis.popChatList.hasOwnProperty(popKey)) {
                                         othis.popChatList[popKey] = new Array();
                                         othis.popChatList[popKey].push(msg);
@@ -357,7 +358,7 @@
                 };
                 othis.roomChat.push(msg);
 
-                var popKey = othis.currentUser.fd +"-"+ toUserFd;
+                popKey = othis.currentUser.fd +"-"+ toUserFd;
                 if (!othis.popChatList.hasOwnProperty(popKey)) {
                     othis.popChatList[popKey] = new Array();
                     othis.popChatList[popKey].push(msg);
