@@ -154,6 +154,15 @@
                     return false;
                 }
             });
+
+            $('.online-list').on('click', function () {
+                $('.online_window').show();
+                $('.windows_input').hide();
+            });
+            $('.times-icon').on('click', function () {
+                $('.online_window').hide();
+                $('.windows_input').show();
+            });
         },
         methods: {
             connect: function () {
