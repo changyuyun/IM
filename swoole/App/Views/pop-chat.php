@@ -239,9 +239,10 @@
 
                                     var popKey = othis.currentUser.fd +"-"+ data.fromUserFd;
                                     if (othis.popChatList.hasOwnProperty(popKey)) {
-                                        othis.popChatList[popKey].insert(msg);
+                                        othis.popChatList[popKey] = [];
+                                        othis.popChatList[popKey].push(msg);
                                     } else {
-                                        othis.popChatList[popKey].insert(msg);
+                                        othis.popChatList[popKey].push(msg);
                                     }
                                     console.log(othis.popChatList);
 
