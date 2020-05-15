@@ -49,7 +49,7 @@
                 <h6>在线数 <span>{{currentCount}}</span></h6>
             </div>
         </div>
-        <div class="talk_window">
+        <!--<div class="talk_window">
             <div class="windows_top">
                 <div class="windows_top_left"><i class="am-icon am-icon-list online-list"></i> 点对点聊天系统 <span>当前交流用户：{{targetUser.username}}</span></div>
                 <div class="windows_top_right">
@@ -118,7 +118,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
     </template>
 </div>
 <script>
