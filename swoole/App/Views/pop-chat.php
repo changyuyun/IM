@@ -356,6 +356,16 @@
                     sendTime: ""
                 };
                 othis.roomChat.push(msg);
+
+                var popKey = othis.currentUser.fd +"-"+ toUserFd;
+                if (!othis.popChatList.hasOwnProperty(popKey)) {
+                    othis.popChatList[popKey] = new Array();
+                    othis.popChatList[popKey].push(msg);
+                } else {
+                    othis.popChatList[popKey].push(msg);
+                }
+                console.log(othis.popChatList);
+
             }
         },
         computed: {
