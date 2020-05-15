@@ -135,7 +135,7 @@
             currentUser      : {username: '-----', intro: '-----------', fd: 0, avatar: 0},
             roomUser         : [],
             roomChat         : [],
-            targetUser       : {username: '-----', fd:0}
+            targetUser       : {username: '-----', fd:0},
             up_recv_time     : 0
         },
         created:function () {
