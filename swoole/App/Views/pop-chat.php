@@ -267,7 +267,18 @@
                 var content = textInput.val();
                 if (content.trim() != '') {
                     if (this.websocketInstance && this.websocketInstance.readyState === 1) {
-                        this.sendTextMessage(content);
+                        var toUserFd = this.targetUser.fd;
+                        if (toUserFd == 0) {
+                            layer.msg('请选择交谈用户!', {
+                                scrollbar : false,
+                                shade     : 0.3,
+                                shadeClose: false,
+                                time      : 2000,
+                                offset    : 't'
+                            }
+                        } else {
+                            this.sendTextMessage(content, toUserFd);
+                        }
                         textInput.val('');
                     } else {
                         layer.tips('连接已断开', '.windows_input', {
@@ -287,9 +298,8 @@
              * 发送文本消息
              * @param content
              */
-            sendTextMessage : function (content) {
-                //TODO:实现获取已选取的用户
-                this.release_chat("PopChat", "chat", channel, content, 17, "text");
+            sendTextMessage : function (content, toUserFd) {
+                this.release_chat("PopChat", "chat", channel, content, toUserFd, "text");
             }
         },
         computed: {
