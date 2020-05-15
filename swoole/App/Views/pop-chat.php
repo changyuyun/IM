@@ -234,15 +234,17 @@
                                         username: othis.roomUser['ityun-' + data.fromUserFd].username,
                                         sendTime: data.sendTime
                                     };
-
                                     othis.roomChat.push(msg);
+
+
                                     var popKey = othis.currentUser.fd +"-"+ data.fromUserFd;
                                     if (othis.popChatList.hasOwnProperty(popKey)) {
-                                        othis.popChatList[popKey].push(msg);
+                                        othis.popChatList[popKey].insert(msg);
                                     } else {
-                                        othis.$set(othis.popChatList, popKey, msg);
+                                        othis.popChatList[popKey].insert(msg);
                                     }
                                     console.log(othis.popChatList);
+
                                     break;
                                 }
                             }
