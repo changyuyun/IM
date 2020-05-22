@@ -148,6 +148,7 @@
             up_recv_time     : 0
         },
         created:function () {
+            console.log(this.data);
             this.connect();
         },
         mounted:function () {
