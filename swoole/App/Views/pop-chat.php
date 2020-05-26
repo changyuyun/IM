@@ -372,6 +372,7 @@
                     othis.popChatList[popKey] = [msg];
                 }
                 console.log(othis.popChatList);
+                console.log(othis.roomChat);
             }
         },
         computed: {
