@@ -144,7 +144,7 @@
             roomChat         : [],
             targetUser       : {username: '-----', fd:0},
             currentPop       : {fd: 0, targetUserFd: 0}, //当前选中的交谈用户 用于切换聊天窗口 fd:当前主人id，targetUserFd:交谈用户id
-            popChatList      : {}, //{"0-0":[{"item":1},{"item":2}]} //点对点交谈记录
+            popChatList      : {}, //{"1-2":[{"text":"你好啊"},{"text":"hello"}]} //点对点交谈记录
             up_recv_time     : 0
         },
         created:function () {
@@ -238,8 +238,14 @@
                                     };
                                     othis.roomChat.push(msg);
 
-
-                                    //popKey = othis.currentUser.fd +"-"+ data.fromUserFd;
+                                    //构造新的记录聊天信息内容
+                                    popKey = othis.currentUser.fd +"-"+ data.fromUserFd;
+                                    if (othis.popChatList.hasOwnProperty(popKey)) {
+                                        othis.popChatList[popKey].push(msg);
+                                    } else {
+                                        othis.popChatList[popKey] = [msg];
+                                    }
+                                    console.log(othis.popChatList);
 
                                     break;
                                 }
