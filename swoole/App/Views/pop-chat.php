@@ -144,6 +144,7 @@
             roomChat         : [],
             targetUser       : {username: '-----', fd:0},
             currentPop       : {fd: 0, targetUserFd: 0}, //当前选中的交谈用户 用于切换聊天窗口 fd:当前主人id，targetUserFd:交谈用户id
+            currentPopStr    : {value : ''},
             popChatList      : {}, //{"1-2":[{"text":"你好啊"},{"text":"hello"}]} //点对点交谈记录
             up_recv_time     : 0
         },
@@ -299,6 +300,8 @@
                 //记录当前交谈方向id
                 othis.currentPop.fd = othis.currentUser.fd;
                 othis.currentPop.targetUserFd = user.fd;
+                othis.currentPopStr.value = othis.currentUser.fd + '-' + user.fd;
+                console.log(othis.currentPopStr);
             },
             /**
              * 发送文本消息
@@ -352,6 +355,7 @@
                 };
                 othis.roomChat.push(msg);
 
+                //构造新的记录聊天信息内容
                 popKey = othis.currentUser.fd +"-"+ toUserFd;
                 othis.storeMessage(popKey, msg);
             },
