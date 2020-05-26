@@ -239,12 +239,7 @@
 
                                     //构造新的记录聊天信息内容
                                     popKey = othis.currentUser.fd +"-"+ data.fromUserFd;
-                                    if (othis.popChatList.hasOwnProperty(popKey)) {
-                                        othis.popChatList[popKey].push(msg);
-                                    } else {
-                                        othis.popChatList[popKey] = [msg];
-                                    }
-                                    console.log(othis.popChatList);
+                                    othis.storeMessage(popKey, msg);
 
                                     break;
                                 }
@@ -357,8 +352,21 @@
                 };
                 othis.roomChat.push(msg);
 
-                //popKey = othis.currentUser.fd +"-"+ toUserFd;
-
+                popKey = othis.currentUser.fd +"-"+ toUserFd;
+                othis.storeMessage(popKey, msg);
+            },
+            /**
+             * 存储点对点聊天信息
+             * @param key
+             * @param msg
+             */
+            storeMessage : function (key, msg) {
+                if (othis.popChatList.hasOwnProperty(popKey)) {
+                    othis.popChatList[popKey].push(msg);
+                } else {
+                    othis.popChatList[popKey] = [msg];
+                }
+                console.log(othis.popChatList);
             }
         },
         computed: {
