@@ -239,14 +239,7 @@
                                     othis.roomChat.push(msg);
 
 
-                                    popKey = othis.currentUser.fd +"-"+ data.fromUserFd;
-                                    if (!othis.popChatList.hasOwnProperty(popKey)) {
-                                        othis.popChatList[popKey] = new Array();
-                                        othis.popChatList[popKey].push(msg);
-                                    } else {
-                                        othis.popChatList[popKey].push(msg);
-                                    }
-                                    console.log(othis.popChatList);
+                                    //popKey = othis.currentUser.fd +"-"+ data.fromUserFd;
 
                                     break;
                                 }
@@ -359,19 +352,13 @@
                 };
                 othis.roomChat.push(msg);
 
-                popKey = othis.currentUser.fd +"-"+ toUserFd;
-                if (!othis.popChatList.hasOwnProperty(popKey)) {
-                    othis.popChatList[popKey] = new Array();
-                    othis.popChatList[popKey].push(msg);
-                } else {
-                    othis.popChatList[popKey].push(msg);
-                }
-                console.log(othis.popChatList);
+                //popKey = othis.currentUser.fd +"-"+ toUserFd;
 
             }
         },
         computed: {
             currentCount() {
+                console.log(this.roomUser);
                 return Object.getOwnPropertyNames(this.roomUser).length - 1;
             }
         },
