@@ -361,6 +361,7 @@
              * @param msg
              */
             storeMessage : function (key, msg) {
+                var othis = this;
                 if (othis.popChatList.hasOwnProperty(popKey)) {
                     othis.popChatList[popKey].push(msg);
                 } else {
@@ -371,7 +372,6 @@
         },
         computed: {
             currentCount() {
-                console.log(this.roomUser);
                 return Object.getOwnPropertyNames(this.roomUser).length - 1;
             }
         },
