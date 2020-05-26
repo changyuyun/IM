@@ -60,7 +60,7 @@
             </div>
             <div class="windows_body" id="chat-window" v-scroll-bottom>
                 <ul class="am-comments-list am-comments-list-flip">
-                    <template v-for="chat in roomChat">
+                    <template v-for="chat in roomChat[currentPopStr.value]">
                         <template v-if="chat.type === 'tips'">
                             <div class="chat-tips">
                                 <span class="am-badge am-badge-primary am-radius">{{chat.content}}</span>
