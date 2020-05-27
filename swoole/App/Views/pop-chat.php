@@ -304,6 +304,10 @@
                 othis.currentPop.targetUserFd = user.fd;
                 othis.currentPopStr.value = othis.currentUser.fd + '-' + user.fd;
                 console.log(othis.currentPopStr);
+
+                othis.currentPopChat = othis.popChatList[othis.currentPopStr.value];
+
+                console.log(othis.currentPopChat);
             },
             /**
              * 发送文本消息
@@ -373,11 +377,9 @@
                 } else {
                     othis.popChatList[popKey] = [msg];
                 }
-                //console.log(othis.popChatList);
-                //console.log(othis.roomChat);
                 othis.currentPopChat = othis.popChatList[popKey];
 
-                console.log(othis.currentPopChat);
+                //console.log(othis.currentPopChat);
             }
         },
         computed: {
