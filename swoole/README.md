@@ -47,7 +47,7 @@
     
 
 #### 二、运行方式
-    1.安装swoole
+    1.[安装swoole](https://www.easyswoole.com/Cn/QuickStart/installSwoole.html "安装swoole")
     2.composer install
     3.php easyswoole start
     4.http://domain.com:port 访问地址
