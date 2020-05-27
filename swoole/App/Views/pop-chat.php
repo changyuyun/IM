@@ -128,6 +128,7 @@
     </template>
 </div>
 <script>
+    //TODO:目前的问题在于如何及时取出与当前交谈对象的聊天记录
     channel = 2;
     popKey = "";
     var Vm = new Vue({
@@ -146,6 +147,7 @@
             currentPop       : {fd: 0, targetUserFd: 0}, //当前选中的交谈用户 用于切换聊天窗口 fd:当前主人id，targetUserFd:交谈用户id
             currentPopStr    : {value : ''},
             popChatList      : {}, //{"1-2":[{"text":"你好啊"},{"text":"hello"}]} //点对点交谈记录
+            currentPopChat   : [], //当前交谈记录列表
             up_recv_time     : 0
         },
         created:function () {
@@ -371,8 +373,11 @@
                 } else {
                     othis.popChatList[popKey] = [msg];
                 }
-                console.log(othis.popChatList);
-                console.log(othis.roomChat);
+                //console.log(othis.popChatList);
+                //console.log(othis.roomChat);
+                othis.currentPopChat = othis.popChatList[popKey];
+
+                console.log(othis.currentPopChat);
             }
         },
         computed: {
