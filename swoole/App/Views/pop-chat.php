@@ -128,7 +128,6 @@
     </template>
 </div>
 <script>
-    //TODO:目前的问题在于如何及时取出与当前交谈对象的聊天记录
     channel = 2;
     popKey = "";
     var Vm = new Vue({
