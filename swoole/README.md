@@ -1,6 +1,6 @@
 # 云聊
 
-**本软件基于开源软件：https://github.com/easy-swoole/demo/tree/3.x-chat 改造而成**
+**本软件基于开源软件：https://github.com/easy-swoole/demo/tree/3.x-chat 二次开发**
 
 #### 一、架构与功能
 
